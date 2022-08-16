@@ -1,0 +1,26 @@
+{
+  "name": "employee-watcher",
+  "version": "1.0.0",
+  "description": "A command line app to aid in tracking employees",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclevela-1234/employee-watcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eclevela-1234/employee-watcher/issues"
+  },
+  "homepage": "https://github.com/eclevela-1234/employee-watcher#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3"
+  }
+}
