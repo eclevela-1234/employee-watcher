@@ -1,3 +1,4 @@
+// opening screen
 console.log(`
 ####### #     # ######  #       ####### #     # ####### #######    #     #    #    #######  #####  #     # ####### ######  
 #       ##   ## #     # #       #     #  #   #  #       #          #  #  #   # #      #    #     # #     # #       #     # 
@@ -12,7 +13,6 @@ WELCOME TO EMPLOYEE WATCHER! (c) 2022 Eliot Cleveland
 
 const inquirer = require("inquirer");
 const server = require("./server");
-
 
 const promptMenu = () => {
   return inquirer.prompt({
