@@ -1,4 +1,5 @@
 // opening screen
+const displayPic = () => {
 console.log(`
 ####### #     # ######  #       ####### #     # ####### #######    #     #    #    #######  #####  #     # ####### ######  
 #       ##   ## #     # #       #     #  #   #  #       #          #  #  #   # #      #    #     # #     # #       #     # 
@@ -9,10 +10,9 @@ console.log(`
 ####### #     # #       ####### #######    #    ####### #######     ## ##  #     #    #     #####  #     # ####### #     # 
 
 WELCOME TO EMPLOYEE WATCHER! (c) 2022 Eliot Cleveland
-`);
+`);}
 
 const inquirer = require("inquirer");
-const server = require("./server");
 
 const promptMenu = () => {
   return inquirer.prompt({
@@ -39,7 +39,7 @@ const promptQuit = () => {
   });
 };
 
-function begin() {
+const begin = () => {
   promptMenu()
     .then(promptQuit)
     .then((data) => {
@@ -47,6 +47,6 @@ function begin() {
         begin();
       }
     });
-}
+};
 
-begin();
+module.exports = {promptMenu, promptQuit, displayPic}
