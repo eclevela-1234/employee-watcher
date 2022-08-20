@@ -18,7 +18,7 @@ router.get("/roles", (req, res) => {
   });
 });
 
-// Create a candidate
+// Create a role
 router.post("/roles", ({ body }, res) => {
   // Candidate is allowed not to be affiliated with a party
   const errors = inputCheck(

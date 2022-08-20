@@ -1,8 +1,8 @@
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
 ('Eliot', 'Cleveland', 1, null),
-('Olivia', 'Wilkinson', 7, 1),
-('Rock', 'Lander', 8, 2),
+('Olivia', 'Wilkinson', 6, 1),
+('Rock', 'Lander', 7, 2),
 ('Max', 'Valentine', 4, 1),
 ('Lana', 'Kiddy', 3, 4),
 ('Louie', 'Dupuy', 10, 4),
@@ -16,7 +16,7 @@ VALUES
 ('CEO', 100000, 3),
 ('Salesperson', 20000, 2),
 ('Widget Maker', 15000, 1),
-('Operations Manager', 30000, 2),
+('Operations Manager', 30000, 1),
 ('Sales Manager', 30000, 2),
 ('Controller', 40000, 3),
 ('Efficiecy Expert', 25000, 1),
