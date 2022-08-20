@@ -19,7 +19,7 @@ router.get("/employees", (req, res) => {
 });
 
 router.post("/employees", ({ body }, res) => {
-  // Candidate is allowed not to be affiliated with a party
+  // Employee is allowed not to be affiliated with a manager
   const errors = inputCheck(
     body,
     "first_name",
@@ -54,7 +54,7 @@ router.post("/employees", ({ body }, res) => {
 
 // Update an employee's role
 router.put("/employee/:id", (req, res) => {
-  // Candidate is allowed to not have party affiliation
+  // Employee must be assaigned a role
   const errors = inputCheck(req.body, "role_id");
   if (errors) {
     res.status(400).json({ error: errors });
