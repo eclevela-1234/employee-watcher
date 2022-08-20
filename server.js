@@ -1,6 +1,8 @@
 const db = require("./db/connection");
 const express = require("express");
 const inquirer = require("inquirer");
+const cTable = require('console.table');
+var https = require('https');
 // const inputCheck = require('./utils/inputCheck');
 
 const ask = require("./app");
@@ -32,6 +34,7 @@ ask.displayPic();
 const run = () => {
 ask
   .promptMenu()
+  .then((data) => ask.handleQuery(data))
   .then(ask.promptQuit)
   .then((data) => {
     if (!data.quit) {
