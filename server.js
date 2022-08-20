@@ -18,17 +18,6 @@ app.use((req, res) => {
   res.status(404).end();
 });
 
-ask.displayPic();
-ask
-  .promptMenu()
-  .then(ask.promptQuit)
-  .then((data) => {
-    console.log(data);
-    if (!data.quit) {
-      ask.promptMenu();
-    }
-  });
-
 // Start server after DB connection
 db.connect((err) => {
   if (err) throw err;
@@ -37,3 +26,18 @@ db.connect((err) => {
     console.log(`Server running on port ${PORT}`);
   });
 });
+
+ask.displayPic();
+
+const run = () => {
+ask
+  .promptMenu()
+  .then(ask.promptQuit)
+  .then((data) => {
+    if (!data.quit) {
+      run();
+    } else {process.exit()}
+  });
+}
+
+run();

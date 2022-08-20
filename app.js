@@ -39,14 +39,5 @@ const promptQuit = () => {
   });
 };
 
-const begin = () => {
-  promptMenu()
-    .then(promptQuit)
-    .then((data) => {
-      if (!data.quit) {
-        begin();
-      }
-    });
-};
 
 module.exports = {promptMenu, promptQuit, displayPic}
