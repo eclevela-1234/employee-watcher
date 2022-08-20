@@ -20,7 +20,6 @@ router.get("/departments", (req, res) => {
 
 // Create a department
 router.post("/departments", ({ body }, res) => {
-  // Candidate is allowed not to be affiliated with a party
   const errors = inputCheck(
     body,
     "name"

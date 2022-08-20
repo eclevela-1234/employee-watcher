@@ -26,7 +26,7 @@
 Node and Mysql must be installed for this program to run. Clone repository and run [npm install]. The database will need to be created in the mysql shell first before the program will function. Run the sql scripts to set up and seed the database. After setting up, the app should run by typing [node server] into the terminal. 
 ## Usage Information
 
-Follow the command line prompts to interact with the meployee database.
+Follow the command line prompts to interact with the meployee database. Here is a [video](https://drive.google.com/file/d/1LKqM8NiRRBid4LYDeCvm4Z59Xd8W-3dI/view) which illustrates its functionality. Enjoy!
 ## Contribution Guidelines
 
 Anyone is welcome to contribute by creating an issue or featur branch. Please reach out as this repo is not closely monitored.

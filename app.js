@@ -40,7 +40,6 @@ const handleQuery = (data) => {
     axios
       .get("http://localhost:3001/api/departments")
       .then((res) => {
-        // console.log(res.data);
         console.log("\n");
         console.table(res.data.data);
       })
@@ -51,7 +50,6 @@ const handleQuery = (data) => {
     axios
       .get("http://localhost:3001/api/roles")
       .then((res) => {
-        // console.log(res.data);
         console.log("\n");
         console.table(res.data.data);
       })
@@ -62,7 +60,6 @@ const handleQuery = (data) => {
     axios
       .get("http://localhost:3001/api/employees")
       .then((res) => {
-        // console.log(res.data);
         console.log("\n");
         console.table(res.data.data);
       })
@@ -203,14 +200,7 @@ const handleQuery = (data) => {
           type: "input",
           name: "manager_id",
           message: "What is the id for the manager of the employee? (Required)",
-          validate: (mgrInput) => {
-            if (mgrInput) {
-              return true;
-            } else {
-              console.log("You need to enter the manager's id!");
-              return false;
-            }
-          },
+          // Manager key does not require input
         },
       ])
       .then((data) => {
