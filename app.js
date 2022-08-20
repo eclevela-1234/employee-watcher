@@ -30,15 +30,8 @@ const promptMenu = () => {
       "Add a role",
       "Add an employee",
       "Update an employee role",
+      "Exit Application"
     ],
-  });
-};
-const promptQuit = () => {
-  return inquirer.prompt({
-    type: "confirm",
-    name: "quit",
-    message: "Are you finished? Enter 'y' to exit.",
-    default: "false",
   });
 };
 
@@ -281,7 +274,9 @@ const handleQuery = (data) => {
             console.error(error);
           });
       });
+  } else {
+    process.exit()
   }
 };
 
-module.exports = { promptMenu, promptQuit, displayPic, handleQuery };
+module.exports = { promptMenu, displayPic, handleQuery };

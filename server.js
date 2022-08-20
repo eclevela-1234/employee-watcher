@@ -23,25 +23,22 @@ app.use((req, res) => {
 // Start server after DB connection
 db.connect((err) => {
   if (err) throw err;
-  console.log("\n");
-  console.log("Database connected.");
+  // console.log("\n");
+  // console.log("Database connected.");
   app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    // console.log(`Server running on port ${PORT}`);
   });
 });
 
 ask.displayPic();
 
 const run = () => {
+
 ask
   .promptMenu()
   .then((data) => ask.handleQuery(data))
-  .then(ask.promptQuit)
-  .then((data) => {
-    if (!data.quit) {
-      run();
-    } else {process.exit()}
-  });
-}
+  .then(() => run())
+ 
+};
 
 run();
