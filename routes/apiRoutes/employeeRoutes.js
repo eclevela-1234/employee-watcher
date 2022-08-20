@@ -4,7 +4,11 @@ const db = require("../../db/connection");
 const inputCheck = require("../../utils/inputCheck");
 
 router.get("/employees", (req, res) => {
-  const sql = `SELECT * FROM employee`;
+  const sql = `SELECT emp.id, emp.first_name, emp.last_name, role.title, role.salary, department.name as department,
+  m.first_name as m_first_name, m.last_name as m_last_name FROM employee emp
+  JOIN role ON role_id = role.id
+  JOIN department on department.id = role.department_id
+  LEFT JOIN employee m on emp.manager_id = m.id`;
 
   db.query(sql, (err, rows) => {
     if (err) {
